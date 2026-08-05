@@ -4,11 +4,12 @@
 
 1. Collect weekly chart data.
 2. Clean raw data.
-3. Generate song table.
-4. Add Spotify audio features.
-5. Add additional metadata.
-6. Aggregate chart statistics.
-7. Analyse long-term trends.
+3. Generate song and artist tables.
+4. Aggregate chart statistics.
+5. Explore chart patterns and generate hypotheses.
+6. Add Spotify audio features.
+7. Add additional metadata.
+8. Analyse long-term trends.
 
 ---
 
@@ -31,6 +32,9 @@ Although the dataset starts in 1952, this project focuses on the period from 198
 The analysis starts in January 1983 because this marks the beginning of a consistent weekly Top 100 chart format in the dataset.
 
 Earlier years contain Top 15, Top 50 or Top 75 charts, which would reduce comparability over time.
+
+The Top 100 charts therefore form the analytical foundation of this project.
+Smaller chart ranges, such as the Top 50, are used later as analytical perspectives rather than as the primary dataset.
 
 ---
 
@@ -59,3 +63,11 @@ Since these represent only three missing entries across more than 2,100 weekly c
 These remaining anomalies will be verified against the Official Charts Company and stored separately in `missing_chart_entries.csv`.
 
 The correction file will be appended automatically during the data preparation pipeline.
+
+---
+
+## Exploratory Analysis
+
+After constructing the chart statistics table, exploratory analyses are performed to investigate recurring chart patterns such as re-entries, temporal developments and seasonal behaviour.
+
+The objective of these analyses is not to establish causal relationships, but to generate hypotheses that can later be explored using Spotify metadata and additional contextual information.
