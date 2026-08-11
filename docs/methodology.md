@@ -44,6 +44,8 @@ During data validation, duplicate chart entries occurring in a small number of N
 
 These records were exact duplicates across all available columns and were therefore removed using `drop_duplicates()`.
 
+During exploratory analysis, additional duplicate chart entries within the same chart week were identified. These records created artificial overlapping chart runs and were removed from the cleaned chart history before run-level and gap analyses.
+
 The original raw dataset remains unchanged throughout the project. A cleaned chart dataset is created separately for all subsequent analyses.
 
 ---
@@ -68,6 +70,6 @@ The correction file will be appended automatically during the data preparation p
 
 ## Exploratory Analysis
 
-After constructing the chart statistics table, exploratory analyses are performed to investigate recurring chart patterns such as re-entries, temporal developments and seasonal behaviour.
+After constructing the chart statistics table, exploratory analyses are performed to investigate recurring chart patterns such as new entries, re-entries, chart run duration, gaps between chart runs, temporal developments and seasonal behaviour.
 
 The objective of these analyses is not to establish causal relationships, but to generate hypotheses that can later be explored using Spotify metadata and additional contextual information.
